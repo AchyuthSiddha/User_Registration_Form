@@ -8,4 +8,5 @@ class Profile(models.Model):
     username=models.OneToOneField(User,on_delete=models.CASCADE)
 
     address=models.TextField()
-    Profile_pic=models.ImageField()
+    Profile_pic=models.ImageField(upload_to='Achyuth')
+    
