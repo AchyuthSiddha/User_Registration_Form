@@ -37,3 +37,7 @@ def Registration(request):
 
 
     return render(request,'Registration.html',d)
+
+
+def Home(request):
+    return render(request,'Home.html')

@@ -1,14 +1,18 @@
+{% extends 'Dummy.html' %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    {% block title%}
+    <title>Registration_page1</title>
+    {%  endblock %}
 </head>
+{% block body_block %}
 <body>
     <center>
-        <h1>Registration Form</h1>
+        <h1>Registration_Form</h1>
         <form  method="POST" enctype="multipart/form-data">
             {% csrf_token %}
                 {{ ufo.as_p }}
@@ -18,4 +22,5 @@
         </form>
     </center>
 </body>
+{% endblock %}
 </html>

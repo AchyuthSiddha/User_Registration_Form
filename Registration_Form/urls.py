@@ -23,6 +23,7 @@ from app1.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('Registration/',Registration,name='Registration'),
+    path('Home/',Home,name='Home'),
 
 
     
