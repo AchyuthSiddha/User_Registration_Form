@@ -1,5 +1,11 @@
+{% extends 'Dummy.html' %}
 {% block body_block %}
-<center>
+{% if username %}
+<h1>welcome to Home page Mr/mrs {{ username }}</h1>
+
+{% else %}
+
+
 <h1 style="color: burlywood;">Welcome to Home Page</h1>
-</center>
+{% endif %}
 {% endblock %}
