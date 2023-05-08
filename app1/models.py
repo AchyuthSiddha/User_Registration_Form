@@ -9,4 +9,6 @@ class Profile(models.Model):
 
     address=models.TextField()
     Profile_pic=models.ImageField(upload_to='Achyuth')
+
+    
     
