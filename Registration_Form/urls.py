@@ -28,6 +28,7 @@ urlpatterns = [
     path('User_logout/',User_logout,name='User_logout'),
     path('Display_Profile/',Display_Profile,name='Display_Profile'),
     path('Change_Password/',Change_Password,name='Change_Password'),
+    path('Forgot_password/',Forgot_password,name='Forgot_password'),
 
     
     

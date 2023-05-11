@@ -22,8 +22,9 @@
         <a href="{% url 'Display_Profile' %}" class="nav-link">Display_Profile</a>
         <a href="{% url 'Change_Password' %}" class="nav-link">Change_Password</a>
         <a href="{% url 'User_logout' %}" class="nav-link">user_logout</a>
-        {% else %} 
+        {% else %}
         <a href="{% url 'user_login' %}" class="nav-link">user_login</a>
+    
         {% endif %}
 
 

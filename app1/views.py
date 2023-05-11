@@ -72,6 +72,7 @@ def User_logout(request):
     logout(request)
     return HttpResponseRedirect(reverse('Home'))
 
+
 def Display_Profile(request):
     username=request.session.get('username')
     UO=User.objects.get(username=username)
@@ -90,3 +91,21 @@ def Change_Password(request):
         return HttpResponse("Password Sucessfully changed:")
         
     return render(request,'Change_Password.html')
+
+
+def Forgot_password(request):
+    if request.method=='POST':
+        uo=request.POST['uo']
+        # username=request.session.get('username')
+        pw=request.POST['pw']
+        # UO=User.objects.get(username=uo)
+        LUO=User.objects.filter(username=uo)
+        if LUO:
+            LUO[0].set_password(pw)
+            LUO[0].save()
+            return HttpResponse("sucessfully change forgot password")
+        else:
+            return HttpResponse("username is not available:")
+
+    
+    return render(request,'Forgot_password.html')
